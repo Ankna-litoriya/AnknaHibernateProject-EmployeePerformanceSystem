@@ -32,20 +32,66 @@ Before you begin, ensure you have the following installed:
 - **Maven** (version 3.6 or higher)
 - **Eclipse IDE** (or any Java IDE of your choice)
 
-## Setup Instructions
+## Usage
+Once the application is running, you can perform the following actions:
 
-Follow these steps to set up the project on your local machine:
+Add Employees: Use the UI to enter employee details and save them to the database.
+View Employees: Retrieve and view the list of employees and their performance records.
+Update Employees: Modify existing employee records through the UI.
+Delete Employees: Remove employees from the database as needed.
+Search Employees: Search for employees by name or other criteria.
+View Performance Reports: Generate and view performance reports for employees.
 
-### 1. Clone the Repository
+## Folder Structure
 
-Open your terminal or command prompt and run the following command to clone the repository:
-
-```bash
-git clone https://github.com/yourusername/EmployeePerformanceSystem.git
-cd EmployeePerformanceSystem
-
-CREATE DATABASE employee_performance;
-
-
+EmployeePerformanceSystem/
+|-- pom.xml                          # Maven configuration file
+|-- src/
+    |-- main/
+        |-- java/
+            |-- com/
+                |-- example/
+                    |-- dao/        # Data Access Object classes
+                        |-- EmployeeDAO.java
+                        |-- PerformanceDAO.java
+                        |-- DepartmentDAO.java
+                    |-- model/      # Entity classes
+                        |-- Employee.java
+                        |-- Performance.java
+                        |-- Department.java
+                        |-- Project.java
+                        |-- Feedback.java
+                        |-- Skill.java
+                        |-- Training.java
+                        |-- Review.java
+                        |-- Salary.java
+                        |-- Leave.java
+                    |-- service/     # Service layer classes
+                        |-- EmployeeService.java
+                        |-- PerformanceService.java
+                        |-- DepartmentService.java
+                    |-- controller/  # Controller classes for handling requests
+                        |-- EmployeeController.java
+                        |-- PerformanceController.java
+                        |-- DepartmentController.java
+                    |-- util/        # Utility classes
+                        |-- HibernateUtil.java
+                        |-- Constants.java
+        |-- resources/
+            |-- hibernate.cfg.xml    # Hibernate configuration file
+            |-- fxml/                # FXML files for JavaFX UI
+                |-- employee.fxml     # FXML for employee management UI
+                |-- performance.fxml   # FXML for performance management UI
+                |-- department.fxml    # FXML for department management UI
+            |-- css/                 # CSS files for styling
+                |-- styles.css        # Styles for JavaFX UI
+            |-- images/              # Images used in the application
+                |-- logo.png          # Application logo
+        |-- webapp/                   # Web resources (if applicable)
+            |-- css/                 # CSS files for web UI (if applicable)
+            |-- js/                  # JavaScript files (if applicable)
+|-- target/                           # Compiled classes and packaged application
+|-- .gitignore                        # Git ignore file
+|-- README.md                         # Project documentation
 
 
